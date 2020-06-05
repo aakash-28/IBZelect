@@ -411,5 +411,7 @@ mailChimp();
             $("#search_input_box").slideToggle();
             $("#search_input").focus();
         });
+        
+    
 
 })(jQuery);	

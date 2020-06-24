@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Product Recommendations</h1>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Get Started</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Laptops</h2>
+    <p>1) What is the operating system which you would prefer? </p>
+  <input type="radio" id="MacOS" name="system" value="MacOS">
+  <label for="MacOS">Mac OS (Great User Interface, Virus free and lag free applications, Preferable for Video Editing and Designing) </label><br>
+  <input type="radio" id="WindowsOS" name="system" value="WindowsOS">
+  <label for="WindowsOS">Windows OS (Easy to use user interface, Easy multi-tasking and very popular for personal and business use) </label><br>
+  <input type="radio" id="UbuntuOS" name="system" value="UbuntuOS">
+  <label for="UbuntuOS">Ubuntu OS (Appealing Graphical User Interface, Linux based open source OS suited for software designing and programming)  </label><br>
+
+
+  <p>2) Define the purpose for which the laptop would be used? </p>
+  <input type="radio" id="General" name="purpose" value="General">
+  <label for="General">General – For use by students and homemakers (Internet Browsing, Casual Gaming, Basic Media Screening , Designed to tackle everyday tasks) </label><br>
+  <input type="radio" id="Work and Business" name="purpose" value="Work and Business">
+  <label for="Work and Business">Work and Business – For use by Business professionals at formal workplaces. (Work with larger files, Handles all your workspace needs and fast performance)  </label><br>
+  <input type="radio" id="Gaming" name="purpose" value="Gaming">
+  <label for="Gaming">Gaming – Laptops designed keeping gamers in mind. (High Resolution games which can be played at extremely high speeds)</label><br>
+
+  <p>3) Are you a frequent traveller and do you carry your laptop along with you often?  </p>
+  <input type="radio" id="Yes" name="traveller" value="Yes">
+  <label for="Yes">Yes - High portability is a must. </label><br>
+  <input type="radio" id="No" name="traveller" value="No">
+  <label for="No">No - Most of the work takes place at your office or home.</label><br>
+
+ <p>4) Are you willing to trade of the performance speed for budget?  </p>
+  <input type="radio" id="Yes" name="trade" value="Yes">
+  <label for="Yes">Yes – Willing to buy a laptop with low running speed due to budget constraints. </label><br>
+  <input type="radio" id="No" name="trade" value="No">
+  <label for="No">No – High running speed is required</label><br>
+ 
+ <p>5) Chose the task to be performed to help decide the ideal RAM size </p>
+  <input type="radio" id="Office" name="task" value="Office">
+  <label for="Office">Office Work, Casual Gaming and Media Viewing.  </label><br>
+  <input type="radio" id="Graphics" name="task" value="Graphics">
+  <label for="Graphics">Graphics editing and Video Designing</label><br>
+   <input type="radio" id="Heavy" name="task" value="Heavy">
+  <label for="Heavy">Heavy gaming and 4K video editing. </label><br>
+  <br>
+  <input type="submit" value="Next">
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

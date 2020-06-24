@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Product Recommendations</h1>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Get Started</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Water Purifiers</h2>
+    <p>1) Define the family size for which the water purifier is being brought? </p>
+  <input type="radio" id="Single" name="size" value="Single">
+  <label for="Single">Single Person</label><br>
+  <input type="radio" id="Two" name="size" value="Two">
+  <label for="Two">Two to Five people</label><br>
+  <input type="radio" id="More" name="size" value="More">
+  <label for="More">More than Six people</label><br>
+
+
+  <p>2) What is the source of drinking water to your house?  </p>
+  <input type="radio" id="Hard" name="source" value="Hard">
+  <label for="Hard">Hard Water– Supply from bore wells and groundwater which is usually supplied by a tanker. </label><br>
+  <input type="radio" id="Soft" name="source" value="Soft">
+  <label for="Soft">Soft Water– Usually comes from rains, lakes and rainwater harvesting which is usually supplied by the municipal corporation. </label><br>
+  
+
+  <p>3) What is the TDS value of the water at your home?</p>
+  <input type="radio" id="Less" name="value" value="Less">
+  <label for="Less">Less than or equal to 250 ppm </label><br>
+  <input type="radio" id="Between" name="value" value="Between">
+  <label for="Between">Between 250 to 1800 ppm</label><br>
+  <input type="radio" id="More" name="value" value="More">
+  <label for="More">More than 2000ppm </label><br>
+
+ <p>4) Does your house have constant electricity supply? </p>
+  <input type="radio" id="Yes" name="electricity" value="Yes">
+  <label for="Yes">Yes – You do not have any power outages </label><br>
+  <input type="radio" id="No" name="electricity" value="No">
+  <label for="No">No – There are frequent power cuts and lack of electricity </label><br>
+
+  <br>
+  <input type="submit" value="Next">
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
